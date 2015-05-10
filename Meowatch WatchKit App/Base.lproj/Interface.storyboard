@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Main Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Meowatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="looking_cat" contentMode="center" animationDuration="1" layout="vertical" id="aWy-BB-lVS" userLabel="Loading Group">
+                            <items>
+                                <imageView width="1" alignment="center" contentMode="center" id="uOf-wc-hbV" userLabel="Progress Bar Image"/>
+                                <label width="1" alignment="left" verticalAlignment="bottom" textAlignment="center" id="q2t-gJ-1Ye" userLabel="Loading Label"/>
+                            </items>
+                        </group>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" contentMode="scaleAspectFit" id="mbx-Fu-fyJ" userLabel="Content Image"/>
+                    </items>
+                    <menu key="menu" id="YC9-TG-rt3">
+                        <items>
+                            <menuItem title="More" icon="shuffle" id="CH3-hA-SNq">
+                                <connections>
+                                    <action selector="shuffle" destination="AgC-eL-Hgc" id="EMO-TD-wKr"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="contentImage" destination="mbx-Fu-fyJ" id="MmX-eu-to1"/>
+                        <outlet property="loadingGroup" destination="aWy-BB-lVS" id="8Nr-Kz-arH"/>
+                        <outlet property="loadingLabel" destination="q2t-gJ-1Ye" id="MqN-0n-eu7"/>
+                        <outlet property="progressBarImage" destination="uOf-wc-hbV" id="Ux6-09-xrD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="396" y="642.5"/>
+        </scene>
+        <!--ModalAlert-->
+        <scene sceneID="aUq-aY-Z4N">
+            <objects>
+                <controller identifier="ModalAlert" id="Fvw-IH-U0k" customClass="ModalAlertInterfaceController" customModule="Meowatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" textAlignment="left" numberOfLines="0" id="kpl-Iy-mzt"/>
+                        <button width="1" alignment="left" title="Button" id="EIK-wd-1Pk">
+                            <connections>
+                                <action selector="didTapButton:" destination="Fvw-IH-U0k" id="Deo-9D-gFa"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="EIK-wd-1Pk" id="xam-WD-zYl"/>
+                        <outlet property="label" destination="kpl-Iy-mzt" id="FnV-9l-BNw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="396" y="909"/>
+        </scene>
+    </scenes>
+</document>

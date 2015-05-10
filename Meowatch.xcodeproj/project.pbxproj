@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		540BE0A41AFDACB600AD6C8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0A21AFDACB600AD6C8E /* Main.storyboard */; };
+		540BE0A61AFDACB600AD6C8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0A51AFDACB600AD6C8E /* Images.xcassets */; };
+		540BE0A91AFDACB600AD6C8E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0A71AFDACB600AD6C8E /* LaunchScreen.xib */; };
+		540BE0B51AFDACB600AD6C8E /* MeowatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE0B41AFDACB600AD6C8E /* MeowatchTests.swift */; };
+		540BE0CD1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0CC1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app */; };
+		540BE0D51AFDAE8F00AD6C8E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0D31AFDAE8F00AD6C8E /* Interface.storyboard */; };
+		540BE0D71AFDAE8F00AD6C8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 540BE0D61AFDAE8F00AD6C8E /* Images.xcassets */; };
+		540BE0DA1AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 540BE0C21AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		540BE1021AFDAF6600AD6C8E /* Meowatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE1011AFDAF6600AD6C8E /* Meowatch.swift */; };
+		54F316AD1AFF11CC00DB8A01 /* Meowatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F316AC1AFF11CC00DB8A01 /* Meowatch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		540BE0AF1AFDACB600AD6C8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 540BE0911AFDACB600AD6C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 540BE0981AFDACB600AD6C8E;
+			remoteInfo = Meowatch;
+		};
+		540BE0CE1AFDAE8F00AD6C8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 540BE0911AFDACB600AD6C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 540BE0CB1AFDAE8F00AD6C8E;
+			remoteInfo = "Meowatch WatchKit App";
+		};
+		540BE0D81AFDAE8F00AD6C8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 540BE0911AFDACB600AD6C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 540BE0C11AFDAE8F00AD6C8E;
+			remoteInfo = "Meowatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		540BE0E11AFDAE8F00AD6C8E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				540BE0DA1AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		540BE0991AFDACB600AD6C8E /* Meowatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meowatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		540BE09D1AFDACB600AD6C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		540BE0A31AFDACB600AD6C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		540BE0A51AFDACB600AD6C8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		540BE0A81AFDACB600AD6C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		540BE0AE1AFDACB600AD6C8E /* MeowatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		540BE0B31AFDACB600AD6C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		540BE0B41AFDACB600AD6C8E /* MeowatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowatchTests.swift; sourceTree = "<group>"; };
+		540BE0C21AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Meowatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540BE0C51AFDAE8F00AD6C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		540BE0CC1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meowatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540BE0D21AFDAE8F00AD6C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		540BE0D41AFDAE8F00AD6C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		540BE0D61AFDAE8F00AD6C8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		540BE1011AFDAF6600AD6C8E /* Meowatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meowatch.swift; sourceTree = "<group>"; };
+		54F316AC1AFF11CC00DB8A01 /* Meowatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meowatch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		540BE0961AFDACB600AD6C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0AB1AFDACB600AD6C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0BF1AFDAE8F00AD6C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		540BE0901AFDACB600AD6C8E = {
+			isa = PBXGroup;
+			children = (
+				540BE09B1AFDACB600AD6C8E /* Meowatch */,
+				540BE0B11AFDACB600AD6C8E /* MeowatchTests */,
+				540BE0C31AFDAE8F00AD6C8E /* Meowatch WatchKit Extension */,
+				540BE0D01AFDAE8F00AD6C8E /* Meowatch WatchKit App */,
+				540BE09A1AFDACB600AD6C8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		540BE09A1AFDACB600AD6C8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0991AFDACB600AD6C8E /* Meowatch.app */,
+				540BE0AE1AFDACB600AD6C8E /* MeowatchTests.xctest */,
+				540BE0C21AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex */,
+				540BE0CC1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		540BE09B1AFDACB600AD6C8E /* Meowatch */ = {
+			isa = PBXGroup;
+			children = (
+				54F316AC1AFF11CC00DB8A01 /* Meowatch.swift */,
+				540BE0A21AFDACB600AD6C8E /* Main.storyboard */,
+				540BE0A51AFDACB600AD6C8E /* Images.xcassets */,
+				540BE0A71AFDACB600AD6C8E /* LaunchScreen.xib */,
+				540BE09C1AFDACB600AD6C8E /* Supporting Files */,
+			);
+			path = Meowatch;
+			sourceTree = "<group>";
+		};
+		540BE09C1AFDACB600AD6C8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				540BE09D1AFDACB600AD6C8E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		540BE0B11AFDACB600AD6C8E /* MeowatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0B41AFDACB600AD6C8E /* MeowatchTests.swift */,
+				540BE0B21AFDACB600AD6C8E /* Supporting Files */,
+			);
+			path = MeowatchTests;
+			sourceTree = "<group>";
+		};
+		540BE0B21AFDACB600AD6C8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0B31AFDACB600AD6C8E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		540BE0C31AFDAE8F00AD6C8E /* Meowatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				540BE1011AFDAF6600AD6C8E /* Meowatch.swift */,
+				540BE0C41AFDAE8F00AD6C8E /* Supporting Files */,
+			);
+			path = "Meowatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		540BE0C41AFDAE8F00AD6C8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0C51AFDAE8F00AD6C8E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		540BE0D01AFDAE8F00AD6C8E /* Meowatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0D31AFDAE8F00AD6C8E /* Interface.storyboard */,
+				540BE0D61AFDAE8F00AD6C8E /* Images.xcassets */,
+				540BE0D11AFDAE8F00AD6C8E /* Supporting Files */,
+			);
+			path = "Meowatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		540BE0D11AFDAE8F00AD6C8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				540BE0D21AFDAE8F00AD6C8E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		540BE0981AFDACB600AD6C8E /* Meowatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540BE0B81AFDACB600AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch" */;
+			buildPhases = (
+				540BE0951AFDACB600AD6C8E /* Sources */,
+				540BE0961AFDACB600AD6C8E /* Frameworks */,
+				540BE0971AFDACB600AD6C8E /* Resources */,
+				540BE0E11AFDAE8F00AD6C8E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				540BE0D91AFDAE8F00AD6C8E /* PBXTargetDependency */,
+			);
+			name = Meowatch;
+			productName = Meowatch;
+			productReference = 540BE0991AFDACB600AD6C8E /* Meowatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		540BE0AD1AFDACB600AD6C8E /* MeowatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540BE0BB1AFDACB600AD6C8E /* Build configuration list for PBXNativeTarget "MeowatchTests" */;
+			buildPhases = (
+				540BE0AA1AFDACB600AD6C8E /* Sources */,
+				540BE0AB1AFDACB600AD6C8E /* Frameworks */,
+				540BE0AC1AFDACB600AD6C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				540BE0B01AFDACB600AD6C8E /* PBXTargetDependency */,
+			);
+			name = MeowatchTests;
+			productName = MeowatchTests;
+			productReference = 540BE0AE1AFDACB600AD6C8E /* MeowatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		540BE0C11AFDAE8F00AD6C8E /* Meowatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540BE0DE1AFDAE8F00AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch WatchKit Extension" */;
+			buildPhases = (
+				540BE0BE1AFDAE8F00AD6C8E /* Sources */,
+				540BE0BF1AFDAE8F00AD6C8E /* Frameworks */,
+				540BE0C01AFDAE8F00AD6C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				540BE0CF1AFDAE8F00AD6C8E /* PBXTargetDependency */,
+			);
+			name = "Meowatch WatchKit Extension";
+			productName = "Meowatch WatchKit Extension";
+			productReference = 540BE0C21AFDAE8F00AD6C8E /* Meowatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		540BE0CB1AFDAE8F00AD6C8E /* Meowatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540BE0DB1AFDAE8F00AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch WatchKit App" */;
+			buildPhases = (
+				540BE0CA1AFDAE8F00AD6C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meowatch WatchKit App";
+			productName = "Meowatch WatchKit App";
+			productReference = 540BE0CC1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		540BE0911AFDACB600AD6C8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Yoshimasa Niwa";
+				TargetAttributes = {
+					540BE0981AFDACB600AD6C8E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					540BE0AD1AFDACB600AD6C8E = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 540BE0981AFDACB600AD6C8E;
+					};
+					540BE0C11AFDAE8F00AD6C8E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					540BE0CB1AFDAE8F00AD6C8E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 540BE0941AFDACB600AD6C8E /* Build configuration list for PBXProject "Meowatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 540BE0901AFDACB600AD6C8E;
+			productRefGroup = 540BE09A1AFDACB600AD6C8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				540BE0981AFDACB600AD6C8E /* Meowatch */,
+				540BE0AD1AFDACB600AD6C8E /* MeowatchTests */,
+				540BE0C11AFDAE8F00AD6C8E /* Meowatch WatchKit Extension */,
+				540BE0CB1AFDAE8F00AD6C8E /* Meowatch WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		540BE0971AFDACB600AD6C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540BE0A41AFDACB600AD6C8E /* Main.storyboard in Resources */,
+				540BE0A91AFDACB600AD6C8E /* LaunchScreen.xib in Resources */,
+				540BE0A61AFDACB600AD6C8E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0AC1AFDACB600AD6C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0C01AFDAE8F00AD6C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540BE0CD1AFDAE8F00AD6C8E /* Meowatch WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0CA1AFDAE8F00AD6C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540BE0D51AFDAE8F00AD6C8E /* Interface.storyboard in Resources */,
+				540BE0D71AFDAE8F00AD6C8E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		540BE0951AFDACB600AD6C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F316AD1AFF11CC00DB8A01 /* Meowatch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0AA1AFDACB600AD6C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540BE0B51AFDACB600AD6C8E /* MeowatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		540BE0BE1AFDAE8F00AD6C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540BE1021AFDAF6600AD6C8E /* Meowatch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		540BE0B01AFDACB600AD6C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 540BE0981AFDACB600AD6C8E /* Meowatch */;
+			targetProxy = 540BE0AF1AFDACB600AD6C8E /* PBXContainerItemProxy */;
+		};
+		540BE0CF1AFDAE8F00AD6C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 540BE0CB1AFDAE8F00AD6C8E /* Meowatch WatchKit App */;
+			targetProxy = 540BE0CE1AFDAE8F00AD6C8E /* PBXContainerItemProxy */;
+		};
+		540BE0D91AFDAE8F00AD6C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 540BE0C11AFDAE8F00AD6C8E /* Meowatch WatchKit Extension */;
+			targetProxy = 540BE0D81AFDAE8F00AD6C8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		540BE0A21AFDACB600AD6C8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				540BE0A31AFDACB600AD6C8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		540BE0A71AFDACB600AD6C8E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				540BE0A81AFDACB600AD6C8E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		540BE0D31AFDAE8F00AD6C8E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				540BE0D41AFDAE8F00AD6C8E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		540BE0B61AFDACB600AD6C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		540BE0B71AFDACB600AD6C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		540BE0B91AFDACB600AD6C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Meowatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		540BE0BA1AFDACB600AD6C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Meowatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		540BE0BC1AFDACB600AD6C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MeowatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meowatch.app/Meowatch";
+			};
+			name = Debug;
+		};
+		540BE0BD1AFDACB600AD6C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MeowatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meowatch.app/Meowatch";
+			};
+			name = Release;
+		};
+		540BE0DC1AFDAE8F00AD6C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Meowatch_WatchKit_Extension;
+				INFOPLIST_FILE = "Meowatch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		540BE0DD1AFDAE8F00AD6C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Meowatch_WatchKit_Extension;
+				INFOPLIST_FILE = "Meowatch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		540BE0DF1AFDAE8F00AD6C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Meowatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		540BE0E01AFDAE8F00AD6C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Meowatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		540BE0941AFDACB600AD6C8E /* Build configuration list for PBXProject "Meowatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540BE0B61AFDACB600AD6C8E /* Debug */,
+				540BE0B71AFDACB600AD6C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		540BE0B81AFDACB600AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540BE0B91AFDACB600AD6C8E /* Debug */,
+				540BE0BA1AFDACB600AD6C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		540BE0BB1AFDACB600AD6C8E /* Build configuration list for PBXNativeTarget "MeowatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540BE0BC1AFDACB600AD6C8E /* Debug */,
+				540BE0BD1AFDACB600AD6C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		540BE0DB1AFDAE8F00AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540BE0DC1AFDAE8F00AD6C8E /* Debug */,
+				540BE0DD1AFDAE8F00AD6C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		540BE0DE1AFDAE8F00AD6C8E /* Build configuration list for PBXNativeTarget "Meowatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540BE0DF1AFDAE8F00AD6C8E /* Debug */,
+				540BE0E01AFDAE8F00AD6C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 540BE0911AFDACB600AD6C8E /* Project object */;
+}
