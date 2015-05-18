@@ -353,7 +353,8 @@ class AnimatedImageFetchInterfaceController: WKInterfaceController {
                 let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.POST, URL: url, parameters: parameters)
                 request.account = account
                 request.addMultipartData(lastFetchResult.originalData, withName: "media", type: "image/gif", filename: "cat.gif")
-                request.performRequestWithHandler(nil)
+                request.performRequestWithHandler({ (data, response, error) in
+                })
             })
         }
     }
