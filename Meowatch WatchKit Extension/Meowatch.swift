@@ -14,36 +14,39 @@ import WatchKit
 
 extension UIImage {
     class func animatedImageWithData(data: NSData) -> UIImage? {
-        let source = CGImageSourceCreateWithData(data, nil)
-        let count = CGImageSourceGetCount(source);
+        if let source = CGImageSourceCreateWithData(data, nil) {
+            let count = CGImageSourceGetCount(source);
 
-        if count <= 1 {
-            return UIImage(data: data)
-        } else {
-            var images: [UIImage] = []
-            var duration = 0.0
+            if count <= 1 {
+                return UIImage(data: data)
+            } else {
+                var images: [UIImage] = []
+                var duration = 0.0
 
-            for index in 0..<count {
-                let cgImage = CGImageSourceCreateImageAtIndex(source, index, nil)
-                let frameProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil) as NSDictionary
-                if let gifProperties = frameProperties[kCGImagePropertyGIFDictionary as NSString] as? NSDictionary {
-                    if let unclampedDelayTime = gifProperties[kCGImagePropertyGIFUnclampedDelayTime as NSString] as? NSNumber {
-                        duration += unclampedDelayTime.doubleValue
-                    } else if let delayTime = gifProperties[kCGImagePropertyGIFDelayTime as NSString] as? NSNumber {
-                        duration += delayTime.doubleValue
+                for index in 0..<count {
+                    if let cgImage = CGImageSourceCreateImageAtIndex(source, index, nil) {
+                        if let frameProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil) as? NSDictionary,
+                            gifProperties = frameProperties[kCGImagePropertyGIFDictionary as NSString] as? NSDictionary {
+                                if let unclampedDelayTime = gifProperties[kCGImagePropertyGIFUnclampedDelayTime as NSString] as? NSNumber {
+                                    duration += unclampedDelayTime.doubleValue
+                                } else if let delayTime = gifProperties[kCGImagePropertyGIFDelayTime as NSString] as? NSNumber {
+                                    duration += delayTime.doubleValue
+                                }
+                        }
+
+                        let image = UIImage(CGImage: cgImage, scale: WKInterfaceDevice.currentDevice().screenScale, orientation: UIImageOrientation.Up)
+                        images.append(image)
                     }
                 }
-
-                if let image = UIImage(CGImage: cgImage, scale: WKInterfaceDevice.currentDevice().screenScale, orientation: UIImageOrientation.Up) {
-                    images.append(image)
-                }
+                return UIImage.animatedImageWithImages(images, duration: duration);
             }
-            return UIImage.animatedImageWithImages(images, duration: duration);
+        } else {
+            return nil
         }
     }
 
     func optimizedAnimatedImage(fitSize: CGSize, maxFrame: Int) -> UIImage? {
-        if let images = self.images as? [UIImage] {
+        if let images = self.images {
             if CGSizeEqualToSize(self.size, fitSize) || CGSizeEqualToSize(fitSize, CGSizeZero) {
                 return self;
             }
@@ -68,9 +71,10 @@ extension UIImage {
                 let image = images[index]
                 image.drawInRect(CGRectMake(0.0, 0.0, scaledSize.width, scaledSize.height))
                 let newImage = UIGraphicsGetImageFromCurrentImageContext()
-                let data = UIImageJPEGRepresentation(newImage, 0.5)
-                let jpegImage = UIImage(data: data)!
-                scaledImages.append(jpegImage)
+                if let data = UIImageJPEGRepresentation(newImage, 0.5),
+                    jpegImage = UIImage(data: data) {
+                    scaledImages.append(jpegImage)
+                }
             }
             UIGraphicsEndImageContext();
 
@@ -167,7 +171,7 @@ struct ProgressBarHelper {
         let barSize = CGSizeMake(WKInterfaceDevice.currentDevice().screenBounds.width - 12.0, 2.0)
 
         UIGraphicsBeginImageContextWithOptions(barSize, false, WKInterfaceDevice.currentDevice().screenScale)
-        let context = UIGraphicsGetCurrentContext()
+        UIGraphicsGetCurrentContext()
         self.progressBarColor.setFill()
         UIBezierPath(roundedRect: CGRectMake(0.0, 0.0, ceil(barSize.width * CGFloat(progress)), barSize.height), cornerRadius: 1.0).fill()
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -220,7 +224,7 @@ struct SocialAccount {
 
     func check(completion: ([ACAccount]?) -> Void) {
         if let serviceType = self.serviceType() {
-            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            if SLComposeViewController.isAvailableForServiceType(serviceType) {
                 let accountStore = ACAccountStore();
                 if let accountType = accountStore.accountTypeWithAccountTypeIdentifier(self.type),
                     accounts = accountStore.accountsWithAccountType(accountType) as? [ACAccount]
